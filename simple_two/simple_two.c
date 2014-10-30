@@ -19,9 +19,13 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 
+static short int myshort = 1;
+module_param(myshort, short, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
+MODULE_PARM_DESC(myshort, "A short int");
 
 static int __init simple_two_init(void) {
   printk(KERN_INFO "simple_two device has been registered");
+  printk(KERN_INFO "Hello my short is %hd",myshort);
   return 0;
 }
 static void __exit simple_two_exit(void) {
