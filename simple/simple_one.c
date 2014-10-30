@@ -21,11 +21,11 @@
 
 
 static int __init simple_one_init(void) {
-  printk(KERN_INFO "simple_one device has been registeredn");
+  printk(KERN_INFO "simple_one device has been registered");
   return 0;
 }
 static void __exit simple_one_exit(void) {
-  printk(KERN_INFO "simple_one device has been unregisteredn");
+  printk(KERN_INFO "simple_one device has been unregistered");
 }
 module_init(simple_one_init);
 module_exit(simple_one_exit);
