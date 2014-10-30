@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  simple.c
+ *       Filename:  simple_one.c
  *
  *    Description:  
  *
@@ -20,15 +20,15 @@
 #include <linux/module.h>
 
 
-static int __init simple_init(void) {
-  printk(KERN_INFO "simple device has been registeredn");
+static int __init simple_one_init(void) {
+  printk(KERN_INFO "simple_one device has been registeredn");
   return 0;
 }
-static void __exit simple_exit(void) {
-  printk(KERN_INFO "simple device has been unregisteredn");
+static void __exit simple_one_exit(void) {
+  printk(KERN_INFO "simple_one device has been unregisteredn");
 }
-module_init(simple_init);
-module_exit(simple_exit);
+module_init(simple_one_init);
+module_exit(simple_one_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Alex Jones <jonesax@hush.com>");
