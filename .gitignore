@@ -1,0 +1,4 @@
+*.cmd
+module*
+Module*
+*.ko
